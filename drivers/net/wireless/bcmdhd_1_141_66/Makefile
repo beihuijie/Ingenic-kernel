@@ -35,7 +35,8 @@ DHDOFILES += bcmsdh.o bcmsdh_linux.o bcmsdh_sdmmc.o bcmsdh_sdmmc_linux.o \
 	dhd_sdio.o dhd_cdc.o dhd_wlfc.o
 
 ifeq ($(CONFIG_BCMDHD_OOB),y)
-DHDCFLAGS += -DOOB_INTR_ONLY -DHW_OOB -DCUSTOMER_OOB
+#DHDCFLAGS += -DOOB_INTR_ONLY -DHW_OOB -DCUSTOMER_OOB
+DHDCFLAGS += -DOOB_INTR_ONLY -DCUSTOMER_OOB
 ifeq ($(CONFIG_BCMDHD_DISABLE_WOWLAN),y)
 DHDCFLAGS += -DDISABLE_WOWLAN
 endif
